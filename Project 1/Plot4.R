@@ -1,7 +1,7 @@
 ## Plot4.png and save it. Including load_data
-setwd("/Users/Yun/Desktop/DS")
+setwd("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 1")
 Plot4 <- function(){
-  source("load_data.R")
+  source("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 1/load_data.R")
   df <- load_data()
   png("Plot4.png", width = 480, height = 480, units = "px")
   
