@@ -5,12 +5,11 @@
 library(datasets)
 library(plyr)
 
-NEI <- readRDS("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 2/summarySCC_PM25.rds")
+NEI <- readRDS("/Users/Yun/Desktop/DS/ExploratoProj/EDA_Project2/summarySds")
 NEI <- transform(NEI, year = factor(year))
 baltimore <- subset(NEI,fips == 24510)
 d2 <- ddply(baltimore, .(year), summarize, Emissions=sum(Emissions))
 with(d2, plot(Emissions~year, d2, xlab = "year", ylab ="total PM2.5 emission (tons)"))
 
 title(main = "Plot2 total PM2.5 emission from Baltimore cross years")
-dev.copy(png, file = "/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 2/Plot2.png")
-dev.off()
+dev.copy(png, file = "/Users/Yun/Desktop/DS/Exploratodata/EDA_ryDataAnalysis/Project 2/Plot2.pngf()

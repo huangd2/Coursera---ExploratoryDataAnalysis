@@ -6,8 +6,8 @@ library(datasets)
 library(plyr)
 library(ggplot2)
 
-NEI <- readRDS("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 2/summarySCC_PM25.rds")
-SCC <- readRDS("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 2/Source_Classification_Code.rds")
+NEI <- readRDS("/Users/Yun/Desktop/DS/data/EDA_Project2/summarySCC_PM25.rds")
+SCC <- readRDS("/Users/Yun/Desktop/DS/data/EDA_Project2/Source_Classification_Code.rds")
 Motor <- subset(NEI,(fips == "24510"| fips == "06037") & type == "ON-ROAD")
 
 total <- aggregate(Emissions ~ year + fips, Motor, sum)

@@ -5,8 +5,8 @@ library(datasets)
 library(plyr)
 library(ggplot2)
 
-NEI <- readRDS("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 2/summarySCC_PM25.rds")
-SCC <- readRDS("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 2/Source_Classification_Code.rds")
+NEI <- readRDS("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project2/summarySCC_PM25.rds")
+SCC <- readRDS("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project2/Source_Classification_Code.rds")
 coalLogi <- grepl("coal", SCC$Short.Name, ignore.case = TRUE)
 coal <- SCC[coalLogi,]
 

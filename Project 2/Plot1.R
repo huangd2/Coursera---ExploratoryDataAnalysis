@@ -5,7 +5,7 @@
 library(datasets)
 library(plyr)
 
-NEI <- readRDS("/Users/Yun/Desktop/DS/ExploratoryDataAnalysis/Project 2/summarySCC_PM25.rds")
+NEI <- readRDS("/Users/Yun/Desktop/DS/data/EDA_Project2/summarySCC_PM25.rds")
 NEI <- transform(NEI, year = factor(year))
 
 d1 <- ddply(NEI, .(year), summarize, Emissions=sum(Emissions))
